@@ -1,0 +1,198 @@
+@font-face {
+  font-family: new;
+  src: url(./NeueHaasDisplayBold.ttf);
+}
+
+#loader{
+  height:100%;
+  width:100%;
+  background-color:black;
+  position:fixed;
+  top:0;
+  z-index: 999;
+  transition: all ease 0.5s;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#loader h1{
+  color:transparent;
+  font-size: 5vw;
+  background : linear-gradient(to right,rgb(31, 177, 203),rgb(15, 69, 176));
+  -webkit-background-clip:text;
+  position:absolute;
+  animation-name:load;
+  animation-duration: 2s;
+  animation-delay:1s;
+  animation-timing-function : linear;
+  opacity:0;
+  transition: all ease 0.2s;
+}
+
+@keyframes load{
+  0%{
+    opacity:0;
+  }
+  10%{
+    opacity:1;
+  }
+  90%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: new;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  
+}
+
+#main {
+  position: relative;
+  z-index: 10;
+}
+
+#page1 {
+  height: 75vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  position: relative;
+  
+}
+
+#page1 #image img {
+  position: absolute;
+  width: 100%;
+  height: 78%;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+nav {
+  padding: 0 2vw;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav img {
+  max-width: 180px;
+  height: auto;
+}
+
+#nav-part2 {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#nav-part2 h4 {
+  padding: 10px 20px;
+  border: 1px solid rgba(14, 14, 14, 0.31);
+  border-radius: 50px;
+  font-weight: 500;
+  color: black;
+  position: relative;
+  font-size: 16px;
+  transition: all ease 0.4s;
+  overflow: hidden;
+  text-align: right;
+}
+
+#nav-part2 h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+#nav-part2 h4 a {
+  text-decoration: none;
+  color: #e1d9d9ff;
+  z-index: 9;
+  position: relative;
+}
+
+#nav-part2 h4:hover a {
+  color: white;
+}
+
+/* ---------------- PAGE 2 (Contact Section) ---------------- */
+
+
+#center {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 4vw;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  flex-wrap: wrap;
+}
+
+#left, #right {
+  flex: 1;
+  padding: 2vw;
+}
+
+#left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#left h1 {
+  text-align: center;
+  font-size: 5vw;
+  margin-bottom: 2vw;
+}
+
+#meetus {
+  display: flex;
+  gap: 25vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contact-box {
+  border-left: 4px solid black;
+  padding-left: 1vw;
+  color: white;
+  max-width: 500px;
+}
+
+.contact-box h3 {
+  margin-bottom: 0.5vw;
+  font-size: 2vw;
+  line-width:3vw;
+}
+
+.contact-box p {
+  font-size: 1.5vw;
+  margin: 0.3vw 0;
+}

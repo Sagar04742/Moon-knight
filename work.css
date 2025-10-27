@@ -307,7 +307,8 @@ nav img { max-width: 160px; height: auto; }
 
 /* -------------------- ABOUT US MAIN -------------------- */
 #center {
-  display: grid;
+  height: 60VW;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   padding: 3rem 2vw;
@@ -339,8 +340,8 @@ nav img { max-width: 160px; height: auto; }
 #p1-left h2 {
   font-size: clamp(1.5rem, 3vw, 2rem);
   border-left: 4px solid #4f4843;
-  padding-left: 1rem;
-  margin-bottom: 1rem;
+  padding-left: 1px;
+  margin-bottom: 1px;
   color: #ccc;
 }
 
@@ -366,9 +367,8 @@ nav img { max-width: 160px; height: auto; }
 }
 
 #p1-right1 img, #p1-right2 img {
-  width: 100%;
+  width: 80%;
   border-radius: 20px;
-  margin-bottom: 1rem;
   transition: transform 0.4s ease;
 }
 

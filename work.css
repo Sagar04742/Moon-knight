@@ -2,45 +2,45 @@
   font-family: new;
   src: url(./NeueHaasDisplayBold.ttf);
 }
-#loader{
-  height:100%;
-  width:100%;
-  background-color:black;
-  position:fixed;
-  top:0;
+#loader {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  top: 0;
   z-index: 999;
   transition: all ease 0.5s;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
-#loader h1{
-  color:transparent;
+#loader h1 {
+  color: transparent;
   font-size: 5vw;
-  background : linear-gradient(to right,rgb(31, 177, 203),rgb(15, 69, 176));
-  -webkit-background-clip:text;
-  position:absolute;
-  animation-name:load;
+  background: linear-gradient(to right, rgb(31, 177, 203), rgb(15, 69, 176));
+  -webkit-background-clip: text;
+  position: absolute;
+  animation-name: load;
   animation-duration: 2s;
-  animation-delay:1s;
-  animation-timing-function : linear;
-  opacity:0;
+  animation-delay: 1s;
+  animation-timing-function: linear;
+  opacity: 0;
   transition: all ease 0.2s;
 }
 
-@keyframes load{
-  0%{
-    opacity:0;
+@keyframes load {
+  0% {
+    opacity: 0;
   }
-  10%{
-    opacity:1;
+  10% {
+    opacity: 1;
   }
-  90%{
-    opacity:1;
+  90% {
+    opacity: 1;
   }
-  100%{
-    opacity:0;
+  100% {
+    opacity: 0;
   }
 }
 
@@ -55,19 +55,20 @@
   font-family: new;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
-#page1{
-  padding:0 2vw;
+#page1 {
+  padding: 0 2vw;
   min-height: 100%;
   width: 100vw;
-  background-color: #EFEAE3; 
+  background-color: #efeae3;
   position: relative;
 }
 nav {
-  top:0;
+  top: 0;
   padding: 2vw;
   width: 100%;
   display: flex;
@@ -128,21 +129,18 @@ nav img {
   color: white;
 }
 
-
-#center{
-  height:50vw;
-  width:100%;
-  display:flex;
+#center {
+  height: 50vw;
+  width: 100%;
+  display: flex;
 }
 #p1-left {
   padding: 4vw 2vw;
-  height:100%;
+  height: 100%;
   width: 50%;
-  background-color: #08242A;
+  background-color: #08242a;
   border-radius: 20px;
-
 }
-
 
 #p1-left h1 {
   border-left: 3px solid rgb(31, 177, 203);
@@ -152,210 +150,215 @@ nav img {
   font-weight: 300;
   margin-top: 10vw;
   line-height: 1.5;
-  margin-left:8vw;
+  margin-left: 8vw;
 }
 #p1-left h2 {
   font-size: 3vw;
-  border-left: 3px solid  #4F4843;
+  border-left: 3px solid #4f4843;
   padding-left: 1vw;
-  color:#4F4843;
+  color: #4f4843;
   font-weight: 300;
   margin-top: -1vw;
-  margin-left:8vw;
+  margin-left: 8vw;
   line-height: 0.9;
 }
 #p1-left h4 {
   font-size: 1vw;
-  color:rgb(126, 119, 114);
+  color: rgb(126, 119, 114);
   font-weight: 50;
   margin-top: 1vw;
-  margin-left:8vw;
+  margin-left: 8vw;
   line-height: 1.2;
 }
-#p1-right1{
+#p1-right1 {
   padding: 4vw 2vw;
   height: 100%;
   width: 25%;
   /* background-color:red; */
   border-radius: 20px;
 }
-#p1-right1 img{
-  height:300px;
-  border-radius:20px;
-  margin-left:2.4vw;
+#p1-right1 img {
+  height: 300px;
+  border-radius: 20px;
+  margin-left: 2.4vw;
 }
-#p1-right2{
+#p1-right2 {
   padding: 4vw 2vw;
   height: 100%;
   width: 25%;
   /* background-color:pink; */
   border-radius: 20px;
 }
-#p1-right1 h2{
-  font-size:1.2vw;
-  padding:1vw 2vw;
-  margin-left:1vw;
-  color:rgba(39, 40, 40, 0.82);
+#p1-right1 h2 {
+  font-size: 1.2vw;
+  padding: 1vw 2vw;
+  margin-left: 1vw;
+  color: rgba(39, 40, 40, 0.82);
 }
-#p1-right2 img{
-  height:300px;
-  border-radius:20px;
-  margin-left:2.4vw;
+#p1-right2 img {
+  height: 300px;
+  border-radius: 20px;
+  margin-left: 2.4vw;
 }
-#p1-right2 h2{
-  font-size:1.2vw;
-  padding:1vw 2vw;
-  margin-left:1vw;
-  color:rgba(39, 40, 40, 0.82)
+#p1-right2 h2 {
+  font-size: 1.2vw;
+  padding: 1vw 2vw;
+  margin-left: 1vw;
+  color: rgba(39, 40, 40, 0.82);
 }
 /* -------------------- RESPONSIVE MEDIA QUERIES -------------------- */
 
 /* -------------------- TABLET (Up to 1024px) -------------------- */
 @media (max-width: 1024px) {
-    #page1 {
-        padding: 0 4vw; /* Slightly more side padding */
-    }
+  #page1 {
+    padding: 0 4vw; /* Slightly more side padding */
+  }
 
-    /* Navigation */
-    nav img {
-        max-width: 150px;
-    }
-    #nav-part2 h4 {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
+  /* Navigation */
+  nav img {
+    max-width: 150px;
+  }
+  #nav-part2 h4 {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
 
-    /* Center Layout: Revert to single column for better use of vertical space */
-    #center {
-        flex-direction: column;
-        height: auto;
-        gap: 30px;
-        padding: 30px 0;
-    }
+  /* Center Layout: Revert to single column for better use of vertical space */
+  #center {
+    flex-direction: column;
+    height: auto;
+    gap: 30px;
+    padding: 30px 0;
+  }
 
-    /* Left Section (Project Narrative) */
-    #p1-left {
-        width: 100%;
-        height: auto;
-        padding: 5vw 4vw;
-        margin: 0;
-    }
-    #p1-left h1 {
-        font-size: 8vw;
-        margin-left: 0;
-        margin-top: 5vw;
-        text-align: center;
-    }
-    #p1-left h2 {
-        font-size: 5vw;
-        margin-left: 0;
-        text-align: center;
-    }
-    #p1-left h4 {
-        font-size: 1.5vw;
-        margin-left: 0;
-        line-height: 1.5;
-        text-align: center;
-        padding: 0 5vw;
-    }
+  /* Left Section (Project Narrative) */
+  #p1-left {
+    width: 100%;
+    height: auto;
+    padding: 5vw 4vw;
+    margin: 0;
+  }
+  #p1-left h1 {
+    font-size: 8vw;
+    margin-left: 0;
+    margin-top: 5vw;
+    text-align: center;
+  }
+  #p1-left h2 {
+    font-size: 5vw;
+    margin-left: 0;
+    text-align: center;
+  }
+  #p1-left h4 {
+    font-size: 1.5vw;
+    margin-left: 0;
+    line-height: 1.5;
+    text-align: center;
+    padding: 0 5vw;
+  }
 
-    /* Right Sections (Contributor Boxes) */
-    #p1-right1, #p1-right2 {
-        width: 100%;
-        height: auto;
-        padding: 3vw;
-        /* Revert to white background for contrast on light page background */
-        background-color: #FFF; 
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        border: 1px solid #ddd;
-        display: flex; /* Ensure inner content remains flexible */
-        flex-direction: row; /* Layout image and text side-by-side */
-        align-items: center;
-        gap: 20px;
-    }
+  /* Right Sections (Contributor Boxes) */
+  #p1-right1,
+  #p1-right2 {
+    width: 100%;
+    height: auto;
+    padding: 3vw;
+    /* Revert to white background for contrast on light page background */
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    display: flex; /* Ensure inner content remains flexible */
+    flex-direction: row; /* Layout image and text side-by-side */
+    align-items: center;
+    gap: 20px;
+  }
 
-    #p1-right1 img, #p1-right2 img {
-        height: 20vw; /* Use vw for dynamic height */
-        width: 30%;
-        border-radius: 15px;
-        margin-left: 0;
-    }
+  #p1-right1 img,
+  #p1-right2 img {
+    height: 20vw; /* Use vw for dynamic height */
+    width: 30%;
+    border-radius: 15px;
+    margin-left: 0;
+  }
 
-    #p1-right1 h2, #p1-right2 h2 {
-        font-size: 1.8vw;
-        padding: 0;
-        margin-left: 0;
-    }
+  #p1-right1 h2,
+  #p1-right2 h2 {
+    font-size: 1.8vw;
+    padding: 0;
+    margin-left: 0;
+  }
 }
-
 
 /* -------------------- MOBILE (Up to 600px) -------------------- */
 @media (max-width: 600px) {
-    /* --- NAVIGATION --- */
-    nav {
-        flex-direction: column;
-        padding: 4vw 2vw;
-    }
-    nav img {
-        max-width: 140px;
-        margin-bottom: 2vw;
-    }
-    #nav-part2 {
-        flex-direction: column;
-        gap: 1.5vw;
-        width: 100%;
-    }
-    #nav-part2 h4 {
-        width: 100%;
-        text-align: center;
-        font-size: 14px;
-        padding: 8px 15px;
-    }
+  /* --- NAVIGATION --- */
+  nav {
+    flex-direction: column;
+    padding: 4vw 2vw;
+  }
+  nav img {
+    max-width: 140px;
+    margin-bottom: 2vw;
+  }
+  #nav-part2 {
+    flex-direction: column;
+    gap: 1.5vw;
+    width: 100%;
+  }
+  #nav-part2 h4 {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 8px 15px;
+  }
 
-    /* --- CENTER LAYOUT --- */
-    #center {
-        gap: 20px;
-        padding: 20px 0;
-    }
+  /* --- CENTER LAYOUT --- */
+  #center {
+    gap: 20px;
+    padding: 20px 0;
+  }
 
-    /* Left Section (Project Narrative) */
-    #p1-left {
-        padding: 6vw 4vw;
-    }
-    #p1-left h1 {
-        font-size: 12vw;
-        margin-top: 8vw;
-        border-left: 2px solid rgb(31, 177, 203);
-    }
-    #p1-left h2 {
-        font-size: 7vw;
-        border-left: 2px solid #4F4843;
-    }
-    #p1-left h4 {
-        font-size: 3.5vw;
-        line-height: 1.4;
-        padding: 0;
-        text-align: left;
-    }
+  /* Left Section (Project Narrative) */
+  #p1-left {
+    padding: 6vw 4vw;
+  }
+  #p1-left h1 {
+    font-size: 12vw;
+    margin-top: 8vw;
+    border-left: 2px solid rgb(31, 177, 203);
+  }
+  #p1-left h2 {
+    font-size: 7vw;
+    border-left: 2px solid #4f4843;
+  }
+  #p1-left h4 {
+    font-size: 3.5vw;
+    line-height: 1.4;
+    padding: 0;
+    text-align: left;
+  }
 
-    /* Right Sections (Contributor Boxes) */
-    #p1-right1, #p1-right2 {
-        padding: 4vw;
-        /* Stack image and text vertically */
-        flex-direction: column;
-        text-align: center;
-    }
+  /* Right Sections (Contributor Boxes) */
+  #p1-right1,
+  #p1-right2 {
+    padding: 4vw;
+    /* Stack image and text vertically */
+    flex-direction: column;
+    text-align: center;
+  }
 
-    #p1-right1 img, #p1-right2 img {
-        height: 50vw; /* Takes up half the screen height */
-        width: 80%;
-        margin-left: 0;
-        margin-bottom: 3vw;
-    }
+  #p1-right1 img,
+  #p1-right2 img {
+    height: 50vw; /* Takes up half the screen height */
+    width: 45%;
+    margin-left: 0;
+    margin-bottom: 3vw;
+  }
 
-    #p1-right1 h2, #p1-right2 h2 {
-        font-size: 4vw;
-        line-height: 1.5;
-        color: rgba(39, 40, 40, 0.82);
-    }
+  #p1-right1 h2,
+  #p1-right2 h2 {
+    font-size: 4vw;
+    line-height: 1.5;
+    color: rgba(39, 40, 40, 0.82);
+  }
 }

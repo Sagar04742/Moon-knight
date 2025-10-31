@@ -208,8 +208,154 @@ nav img {
   margin-left:1vw;
   color:rgba(39, 40, 40, 0.82)
 }
-/* -------------------- RESPONSIVE -------------------- */
-@media (max-width: 768px) {
-  #center { grid-template-columns: 1fr; }
-  nav img { max-width: 140px; }
+/* -------------------- RESPONSIVE MEDIA QUERIES -------------------- */
+
+/* -------------------- TABLET (Up to 1024px) -------------------- */
+@media (max-width: 1024px) {
+    #page1 {
+        padding: 0 4vw; /* Slightly more side padding */
+    }
+
+    /* Navigation */
+    nav img {
+        max-width: 150px;
+    }
+    #nav-part2 h4 {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* Center Layout: Revert to single column for better use of vertical space */
+    #center {
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+        padding: 30px 0;
+    }
+
+    /* Left Section (Project Narrative) */
+    #p1-left {
+        width: 100%;
+        height: auto;
+        padding: 5vw 4vw;
+        margin: 0;
+    }
+    #p1-left h1 {
+        font-size: 8vw;
+        margin-left: 0;
+        margin-top: 5vw;
+        text-align: center;
+    }
+    #p1-left h2 {
+        font-size: 5vw;
+        margin-left: 0;
+        text-align: center;
+    }
+    #p1-left h4 {
+        font-size: 1.5vw;
+        margin-left: 0;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 5vw;
+    }
+
+    /* Right Sections (Contributor Boxes) */
+    #p1-right1, #p1-right2 {
+        width: 100%;
+        height: auto;
+        padding: 3vw;
+        /* Revert to white background for contrast on light page background */
+        background-color: #FFF; 
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ddd;
+        display: flex; /* Ensure inner content remains flexible */
+        flex-direction: row; /* Layout image and text side-by-side */
+        align-items: center;
+        gap: 20px;
+    }
+
+    #p1-right1 img, #p1-right2 img {
+        height: 20vw; /* Use vw for dynamic height */
+        width: 30%;
+        border-radius: 15px;
+        margin-left: 0;
+    }
+
+    #p1-right1 h2, #p1-right2 h2 {
+        font-size: 1.8vw;
+        padding: 0;
+        margin-left: 0;
+    }
+}
+
+
+/* -------------------- MOBILE (Up to 600px) -------------------- */
+@media (max-width: 600px) {
+    /* --- NAVIGATION --- */
+    nav {
+        flex-direction: column;
+        padding: 4vw 2vw;
+    }
+    nav img {
+        max-width: 140px;
+        margin-bottom: 2vw;
+    }
+    #nav-part2 {
+        flex-direction: column;
+        gap: 1.5vw;
+        width: 100%;
+    }
+    #nav-part2 h4 {
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    /* --- CENTER LAYOUT --- */
+    #center {
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    /* Left Section (Project Narrative) */
+    #p1-left {
+        padding: 6vw 4vw;
+    }
+    #p1-left h1 {
+        font-size: 12vw;
+        margin-top: 8vw;
+        border-left: 2px solid rgb(31, 177, 203);
+    }
+    #p1-left h2 {
+        font-size: 7vw;
+        border-left: 2px solid #4F4843;
+    }
+    #p1-left h4 {
+        font-size: 3.5vw;
+        line-height: 1.4;
+        padding: 0;
+        text-align: left;
+    }
+
+    /* Right Sections (Contributor Boxes) */
+    #p1-right1, #p1-right2 {
+        padding: 4vw;
+        /* Stack image and text vertically */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #p1-right1 img, #p1-right2 img {
+        height: 50vw; /* Takes up half the screen height */
+        width: 80%;
+        margin-left: 0;
+        margin-bottom: 3vw;
+    }
+
+    #p1-right1 h2, #p1-right2 h2 {
+        font-size: 4vw;
+        line-height: 1.5;
+        color: rgba(39, 40, 40, 0.82);
+    }
 }

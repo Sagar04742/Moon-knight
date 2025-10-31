@@ -637,218 +637,349 @@ video {
 
 /* -------------------- RESPONSIVE MEDIA QUERIES -------------------- */
 
-/* MOBILE: up to 600px */
+/* -------------------- MOBILE (Smallest Screens up to 600px) -------------------- */
 @media (max-width: 600px) {
 
-  /* NAVIGATION */
-  nav {
-    flex-direction: column;
-    padding: 4vw 2vw;
-  }
-  #nav-part2 {
-    flex-direction: column;
-    gap: 2vw;
-    justify-content: center;
-    width: 100%;
-  }
-  #nav-part2 h4 {
-    font-size: 14px;
-    padding: 8px 15px;
-  }
+    /* --- GLOBAL & UTILITY --- */
+    #page1, #page2, #page3, #page4, #page5 {
+        padding: 4vw 2vw; /* Increased padding for better breathing room */
+    }
+    #loader h1 {
+        font-size: 8vw;
+    }
+    /* Hide decorative/complex elements for performance on mobile */
+    #hero-shape, #hero-1, #hero-2, #hero-3, #fixed-image {
+        display: none; 
+    }
 
-  /* HERO SECTION */
-  #center {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    padding-bottom: 5vw;
-  }
-  #left h3 {
-    width: 90%;
-    font-size: 5vw;
-    line-height: 1.2;
-  }
-  #center h1 {
-    font-size: 10vw;
-    line-height: 1.1;
-  }
-  #hero-shape, #hero-1, #hero-2, #hero-3 {
-    display: none; /* Hide large shapes for mobile */
-  }
+    /* --- NAVIGATION --- */
+    nav {
+        flex-direction: column;
+        padding: 4vw 2vw;
+    }
+    nav img {
+        max-width: 150px;
+        margin-bottom: 3vw;
+    }
+    #nav-part2 {
+        flex-direction: column;
+        gap: 2vw;
+        width: 100%;
+    }
+    #nav-part2 h4 {
+        font-size: 14px;
+        padding: 8px 15px;
+        width: 100%; /* Full width buttons for tap targets */
+        text-align: center;
+    }
 
-  /* VIDEO */
-  video {
-    border-radius: 10px;
-  }
+    /* --- PAGE 1: HERO SECTION --- */
+    #center {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+        border-bottom: none; /* Removed thin border for cleaner look */
+    }
+    #left {
+        order: 2; /* Put text below the main heading on mobile */
+        width: 100%;
+    }
+    #left h3 {
+        width: 90%;
+        font-size: 4.5vw;
+        line-height: 1.4;
+        margin-bottom: 5vw;
+        text-align: center;
+    }
+    #right {
+        order: 1;
+        width: 100%;
+    }
+    #center h1 {
+        font-size: 15vw; /* Much larger on mobile for impact */
+        line-height: 1.1;
+        text-align: center;
+    }
 
-  /* PAGE 2 - MOVING TEXT */
-  #moving-text h1 {
-    font-size: 7vw;
-  }
-  #gola {
-    height: 35px;
-    width: 35px;
-    margin: 1vw;
-  }
+    /* --- PAGE 2: MOVING TEXT & BOTTOM --- */
+    #moving-text h1 {
+        font-size: 8vw;
+    }
+    #gola {
+        height: 35px;
+        width: 35px;
+        margin: 1vw 2vw;
+    }
 
-  /* PAGE 2 BOTTOM */
-  #page-2-bottom {
-    flex-direction: column;
-    align-items: center;
-    padding: 4vw 2vw;
-    gap: 3vw;
-  }
-  #page-2-bottom .text h1 {
-    font-size: 6vw;
-    line-height: 1.2;
-  }
-  #page-2-bottom .image {
-    margin-top: 0;
-    align-items: center;
-  }
-  #page-2-bottom .image img {
-    max-width: 90%;
-  }
-  #page-2-bottom .image p {
-    font-size: 3vw;
-    max-width: 90%;
-    text-align: center;
-  }
+    #page-2-bottom {
+        flex-direction: column;
+        align-items: center;
+        padding: 8vw 2vw;
+        height: auto;
+        gap: 5vw;
+    }
+    #page-2-bottom .text, #page-2-bottom .image {
+        flex: 1 1 100%;
+        min-width: 100%;
+        margin-top: 0;
+    }
+    #page-2-bottom .text h1 {
+        font-size: 6vw;
+        line-height: 1.3;
+        text-align: center;
+    }
+    #page-2-bottom .image {
+        align-items: center;
+    }
+    #page-2-bottom .image img {
+        max-width: 80%;
+    }
+    #page-2-bottom .image p {
+        font-size: 3.5vw;
+        max-width: 80%;
+        text-align: center;
+    }
+    .glow1, .glow2 {
+        /* Hide glow elements on small screen */
+        display: none; 
+    }
 
-  /* PAGE 3 ELEMENTS */
-  .elem h2 {
-    font-size: 5vw;
-  }
-  #fixed-image {
-    display: none; /* hide fixed image on mobile */
-  }
+    /* --- PAGE 3: ELEMENTS --- */
+    .elem {
+        height: 10vw;
+    }
+    .elem h2 {
+        font-size: 7vw;
+        margin-top: 0;
+    }
+    
+    /* --- PAGE 4: SERVICE DETAIL --- */
+    #page4 {
+        flex-direction: column;
+        margin-top: 5vw;
+        padding: 5vw 2vw;
+    }
+    #p4-left, #p4-right {
+        width: 100%;
+        height: auto;
+        margin-top: 3vw;
+        padding: 5vw;
+    }
+    #p4-left h1, #p4-left h2 {
+        font-size: 8vw;
+        margin-left: 2vw;
+    }
+    #p4-left h4 {
+        font-size: 3.5vw;
+        margin-left: 2vw;
+        line-height: 1.4;
+    }
 
-  /* PAGE 4 */
-  #page4 {
-    flex-direction: column;
-    margin-top: 2vw;
-  }
-  #p4-left, #p4-right {
-    width: 100%;
-    height: auto;
-    margin-top: 2vw;
-  }
-  #p4-left h1, #p4-left h2 {
-    font-size: 6vw;
-    margin-left: 5vw;
-  }
-  #p4-left h4 {
-    font-size: 3vw;
-    margin-left: 5vw;
-  }
+    /* --- PAGE 5: SWIPER --- */
+    .swiper-slide {
+        width: 90% !important;
+        padding: 5vw;
+    }
+    .swiper-slide h4 {
+        font-size: 3.5vw;
+        padding-top: 2vw;
+    }
+    .swiper-slide img {
+        max-width: 100px;
+    }
 
-  /* PAGE 5 - SWIPER */
-  .swiper-slide {
-    width: 80% !important;
-    padding: 3vw;
-  }
-  .swiper-slide h4 {
-    font-size: 3vw;
-    padding-top: 1vw;
-  }
-
-  /* FOOTER */
-  #footer {
-    flex-direction: column;
-    padding: 3vw 2vw;
-    text-align: center;
-  }
-  #footer-left, #footer-right {
-    width: 100%;
-    margin-bottom: 2vw;
-    text-align: center;
-  }
-  #footer h1 {
-    font-size: 25vw;
-  }
-  #footer-bottom h4 {
-    font-size: 3vw;
-  }
+    /* --- FOOTER --- */
+    #footer {
+        height: auto;
+        position: relative; /* Make footer relative on mobile */
+        padding-top: 50vh; /* Account for the huge h1 text */
+    }
+    #footer h1 {
+        font-size: 20vw;
+        bottom: 50%;
+        transform: translate(-50%, 50%);
+    }
+    #footer-div {
+        flex-direction: column;
+        height: auto;
+        padding: 5vw 2vw;
+        text-align: center;
+    }
+    #footer-left, #footer-right {
+        width: 100%;
+        text-align: center;
+    }
+    #footer-left h2 {
+        font-size: 7vw;
+        margin-left: 0;
+        margin-bottom: 5vw;
+        width: 100%;
+        line-height: 1.2;
+    }
+    #footer-right h3, #footer-right h2 {
+        font-size: 4vw;
+        margin-left: 0;
+        margin-top: 2vw;
+    }
+    #footer-bottom {
+        flex-direction: column;
+        align-items: center;
+        padding: 4vw 2vw;
+        height: auto;
+        gap: 1vw;
+    }
+    #footer-bottom h4 {
+        font-size: 3vw;
+    }
 }
 
-/* TABLET: 601px to 900px */
-@media (min-width: 601px) and (max-width: 900px) {
+/* -------------------- TABLET (601px to 992px) -------------------- */
+@media (min-width: 601px) and (max-width: 992px) {
 
-  nav {
-    flex-direction: row;
-    padding: 3vw 2vw;
-  }
-  #nav-part2 h4 {
-    font-size: 14px;
-    padding: 9px 18px;
-  }
+    /* --- GLOBAL & UTILITY --- */
+    #page1, #page2, #page3, #page4, #page5 {
+        padding: 3vw 2vw; 
+    }
+    
+    /* --- NAVIGATION --- */
+    nav {
+        padding: 2vw;
+    }
+    nav img {
+        max-width: 160px;
+    }
+    #nav-part2 h4 {
+        font-size: 15px;
+        padding: 9px 18px;
+    }
 
-  #center {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    height: auto;
-    padding-bottom: 3vw;
-  }
-  #left h3 {
-    width: 80%;
-    font-size: 4vw;
-  }
-  #center h1 {
-    font-size: 8vw;
-    line-height: 1.1;
-  }
+    /* --- PAGE 1: HERO SECTION --- */
+    #center {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding-bottom: 3vw;
+    }
+    #left, #right {
+        width: 100%;
+        text-align: center;
+    }
+    #left h3 {
+        width: 70%;
+        margin: 0 auto 3vw auto;
+        font-size: 3vw;
+        line-height: 1.4;
+    }
+    #center h1 {
+        font-size: 10vw;
+        line-height: 1.1;
+    }
+    #hero-shape {
+        width: 55vw;
+        height: 40vw;
+    }
+    
+    /* --- PAGE 2: BOTTOM --- */
+    #page-2-bottom {
+        flex-direction: column;
+        align-items: center;
+        gap: 3vw;
+        padding: 6vw 2vw;
+    }
+    #page-2-bottom .text, #page-2-bottom .image {
+        width: 90%;
+        min-width: 0;
+        margin-top: 0;
+    }
+    #page-2-bottom .text h1 {
+        font-size: 4vw;
+        text-align: center;
+    }
+    #page-2-bottom .image {
+        align-items: center;
+    }
+    #page-2-bottom .image img {
+        max-width: 350px;
+    }
+    #page-2-bottom .image p {
+        font-size: 2vw;
+        max-width: 350px;
+        text-align: center;
+    }
 
-  #page-2-bottom {
-    flex-direction: column;
-    gap: 2vw;
-    padding: 4vw 2vw;
-  }
-  #page-2-bottom .text h1 {
-    font-size: 4.5vw;
-  }
-  #page-2-bottom .image img {
-    max-width: 80%;
-  }
-  #page-2-bottom .image p {
-    font-size: 2.5vw;
-    max-width: 80%;
-    text-align: center;
-  }
+    /* --- PAGE 3: ELEMENTS --- */
+    .elem h2 {
+        font-size: 4vw;
+    }
+    #fixed-image {
+        height: 25vw;
+        width: 20vw;
+    }
 
-  #page4 {
-    flex-direction: row;
-    margin-top: 2vw;
-  }
-  #p4-left, #p4-right {
-    width: 48%;
-  }
-  #p4-left h1, #p4-left h2 {
-    font-size: 2.5vw;
-    margin-left: 2vw;
-  }
-  #p4-left h4 {
-    font-size: 1.5vw;
-    margin-left: 2vw;
-  }
+    /* --- PAGE 4: SERVICE DETAIL --- */
+    #page4 {
+        flex-direction: row;
+        margin-top: 2vw;
+    }
+    #p4-left, #p4-right {
+        width: 50%;
+        height: 40vw; /* Adjust height for tablet view */
+        padding: 3vw;
+    }
+    #p4-left h1, #p4-left h2 {
+        font-size: 3vw;
+        margin-left: 2vw;
+    }
+    #p4-left h4 {
+        font-size: 1.5vw;
+        margin-left: 2vw;
+    }
 
-  .swiper-slide {
-    width: 60% !important;
-  }
-  .swiper-slide h4 {
-    font-size: 1.5vw;
-  }
+    /* --- PAGE 5: SWIPER --- */
+    .swiper-slide {
+        width: 50% !important;
+    }
+    .swiper-slide h4 {
+        font-size: 1.5vw;
+    }
 
-  #footer h1 {
-    font-size: 17vw;
-  }
-  #footer-bottom h4 {
-    font-size: 1.2vw;
-  }
+    /* --- FOOTER --- */
+    #footer h1 {
+        font-size: 20vw;
+    }
+    #footer-left h2 {
+        font-size: 3vw;
+        margin-left: 3vw;
+    }
+    #footer-right h3, #footer-right h2 {
+        font-size: 2vw;
+        margin-left: 10vw;
+    }
+    #footer-bottom h4 {
+        font-size: 1.2vw;
+    }
 }
 
-/* DESKTOP: above 901px (current design mostly applies) */
-@media (min-width: 901px) {
-  /* No major changes needed; your original CSS mostly applies */
+/* -------------------- LARGE DESKTOPS (Above 1400px) -------------------- */
+@media (min-width: 1400px) {
+    /* Optimizing for very large screens */
+    #page1, #page2, #page3, #page4, #page5, #footer {
+        padding: 2vw 5vw; 
+    }
+    #left h3 {
+        width: 20vw; /* Keep line length optimal */
+        font-size: 1.5vw;
+        line-height: 2vw;
+    }
+    #center h1 {
+        font-size: 8vw;
+        line-height: 7.5vw;
+    }
+    #page-2-bottom .text h1 {
+        font-size: 2vw;
+    }
 }
